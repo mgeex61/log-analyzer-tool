@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log Analyzer Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="badge">IT Analyse Tool</p>
+      <h1>Log Analyzer</h1>
+      <p>
+        Ein kleines Web-Tool zum Analysieren von Log-Dateien.
+        Es erkennt Fehler, Warnungen und Informationsmeldungen automatisch.
+      </p>
+    </section>
+
+    <section class="panel">
+      <label for="logInput">Log-Daten einfügen</label>
+     <div class="upload-box">
+  <label for="fileInput">Log-Datei hochladen (.txt / .log)</label>
+  <input type="file" id="fileInput" accept=".txt,.log" />
+</div>
+      <textarea id="logInput" placeholder="Beispiel:
+ERROR: Verbindung fehlgeschlagen
+INFO: Benutzer erfolgreich angemeldet
+WARNING: Antwortzeit ungewöhnlich hoch
+ERROR: Timeout beim Server"></textarea>
+
+      <div class="actions">
+        <button id="analyzeBtn">Analysieren</button>
+        <button id="clearBtn" class="secondary">Zurücksetzen</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="card error">
+        <span>Fehler</span>
+        <strong id="errorCount">0</strong>
+      </div>
+      <div class="card warning">
+        <span>Warnungen</span>
+        <strong id="warningCount">0</strong>
+      </div>
+      <div class="card info">
+        <span>Infos</span>
+        <strong id="infoCount">0</strong>
+      </div>
+      <div class="card total">
+        <span>Gesamt</span>
+        <strong id="totalCount">0</strong>
+      </div>
+    </section>
+
+    <section class="results">
+      <h2>Analyse-Ergebnis</h2>
+      <div id="resultList" class="result-list">
+        <p class="empty">Noch keine Analyse durchgeführt.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
