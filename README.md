@@ -4,6 +4,7 @@ Ein einfaches Web-Tool zur Analyse von Log-Dateien.
 Es erkennt automatisch Fehler, Warnungen und Informationsmeldungen und stellt diese übersichtlich dar.
 
 ---
+🔍 Live Demo: https://mgeex61.github.io/log-analyzer-tool/
 
 ## 🚀 Funktionen
 
